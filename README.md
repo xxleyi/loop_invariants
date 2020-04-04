@@ -1,4 +1,4 @@
-## loop_invariants
+## loop invariants
 
 此仓库用于在 issues 中记录自己使用「循环不变量」视角整理的算法题解。
 
