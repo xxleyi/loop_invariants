@@ -29,7 +29,7 @@
 
 「循环不变量」的视角下，关键还是寻找相关的变量 `someVar` 以及 `checkWithCondition`。后者在大部分时候都不必直接体现在代码中，但解题者应该了然于胸，并正确的初始化以及更新相关变量，隐式的实现 `checkWithCondition(someVar) == true`。当然，在不影响性能且对暴露报错有良好助益时，完全可以显式的将「循环不变量」的断言放于代码的关键位置。`react` 源码中的 `invariant` 函数就被广泛的用来断言「循环不变量」。
 
-> In [computer science](https://en.wikipedia.org/wiki/Computer_science), a **loop invariant** is a property of a [program](https://en.wikipedia.org/wiki/Computer_program) [loop](https://en.wikipedia.org/wiki/Control_flow#Loops) that is true before (and after) each iteration. It is a [logical assertion](https://en.wikipedia.org/wiki/Logical_assertion), sometimes checked within the code by an [assertion](https://en.wikipedia.org/wiki/Assertion_(software_development)) ，call. Knowing its invariant(s) is essential in understanding the effect of a loop.
+> In [computer science](https://en.wikipedia.org/wiki/Computer_science), a **loop invariant** is a property of a [program](https://en.wikipedia.org/wiki/Computer_program) [loop](https://en.wikipedia.org/wiki/Control_flow#Loops) that is true before (and after) each iteration. It is a [logical assertion](https://en.wikipedia.org/wiki/Logical_assertion), sometimes checked within the code by an [assertion](https://en.wikipedia.org/wiki/Assertion_(software_development)) call. **Knowing its invariant(s) is essential in understanding the effect of a loop.**
 
 引自 [Loop invariant - Wikipedia](https://en.wikipedia.org/wiki/Loop_invariant)
 
