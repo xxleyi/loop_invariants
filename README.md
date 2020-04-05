@@ -29,7 +29,14 @@
 
 「循环不变式」的视角下，关键还是寻找相关的变量 `someVar` 以及 `checkWithCondition`。后者在大部分时候都不必直接体现在代码中，但解题者应该了然于胸，并正确的初始化以及更新相关变量，隐式的实现 `checkWithCondition(someVar) == true`。当然，在不影响性能且对暴露报错有良好助益时，完全可以显式的将「循环不变式」的断言放于代码的关键位置。`react` 源码中的 `invariant` 函数就被广泛的用来断言「循环不变式」。
 
-> In [computer science](https://en.wikipedia.org/wiki/Computer_science), a **loop invariant** is a property of a [program](https://en.wikipedia.org/wiki/Computer_program) [loop](https://en.wikipedia.org/wiki/Control_flow#Loops) that is true before (and after) each iteration. It is a [logical assertion](https://en.wikipedia.org/wiki/Logical_assertion), sometimes checked within the code by an [assertion](https://en.wikipedia.org/wiki/Assertion_(software_development)) call. **Knowing its invariant(s) is essential in understanding the effect of a loop.**
+> In [computer science](https://en.wikipedia.org/wiki/Computer_science), a **loop invariant** is a property of a [program](https://en.wikipedia.org/wiki/Computer_program) [loop](https://en.wikipedia.org/wiki/Control_flow#Loops) that is true before (and after) each iteration. It is a [logical assertion](https://en.wikipedia.org/wiki/Logical_assertion), sometimes checked within the code by an [assertion](https://en.wikipedia.org/wiki/Assertion_(software_development)) call. **Knowing its invariant(s) is essential in understanding the effect of a loop**.
+> 
+> In [formal program verification](https://en.wikipedia.org/wiki/Formal_verification), particularly the [Floyd-Hoare approach](https://en.wikipedia.org/wiki/Hoare_logic), loop invariants are expressed by formal [predicate logic](https://en.wikipedia.org/wiki/Predicate_logic) and used to prove properties of loops and by extension [algorithms](https://en.wikipedia.org/wiki/Algorithm) that employ loops (usually [correctness](https://en.wikipedia.org/wiki/Correctness_(computer_science)) properties). The loop invariants will be true on entry into a loop and following each iteration, so that on exit from the loop both the loop invariants and the loop termination condition can be guaranteed.
+> 
+> From a programming methodology viewpoint, **the loop invariant can be viewed as a more abstract specification of the loop**, which characterizes the deeper purpose of the loop beyond the details of this implementation. A survey article [[1]](https://en.wikipedia.org/wiki/Loop_invariant#cite_note-1) covers fundamental algorithms from many areas of computer science (searching, sorting, optimization, arithmetic etc.), characterizing each of them from the viewpoint of its invariant.
+> 
+> Because of the similarity of loops and [recursive](https://en.wikipedia.org/wiki/Recursion) programs, proving partial correctness of loops with invariants is very similar to proving correctness of recursive programs via [induction](https://en.wikipedia.org/wiki/Structural_induction). In fact, **the loop invariant is often the same as the inductive hypothesis to be proved for a recursive program equivalent to a given loop**.
+
 
 引自 [Loop invariant - Wikipedia](https://en.wikipedia.org/wiki/Loop_invariant)
 
